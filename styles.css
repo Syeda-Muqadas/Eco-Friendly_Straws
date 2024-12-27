@@ -1,0 +1,238 @@
+    /* General Styles */
+    body {
+        font-family: 'Poppins', sans-serif;
+        background-color: #f0f8ff;
+        margin: 0;
+        padding: 0;
+    }
+    header {
+        background: linear-gradient(to right, #4CAF50, #87CEFA);
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        padding: 20px;
+    }
+    header h1 {
+        font-size: 2.5rem;
+        margin-bottom: 10px;
+        text-align: center;
+    }
+    .navbar-brand{
+        font-weight: bolder;
+        font-size: 2rem;
+
+    }
+    
+    
+
+    footer {
+        background-color: #4CAF50;
+    }
+    footer p {
+        margin: 0;
+        padding: 10px;
+        color: white;
+        font-size: 0.9rem;
+    }
+
+    /* Hero Section */
+    .hero {
+        background: url('assets/beach.jpg') center/cover no-repeat;
+        position: relative; /* Make it relative for layering */
+        color: white;
+        height: 100vh;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        text-align: center;
+        padding: 20px;
+        overflow: hidden;
+    }
+    .hero::before {
+        content: "";
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background: url('assets/beach.jpg') center/cover no-repeat;
+        filter: blur(8px); /* Apply blur to the background */
+        z-index: 1; /* Place it behind the text */
+        opacity: 0.6; /* Slightly fade the image for better readability */
+    }
+
+    .hero::after {
+        content: "";
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background: rgba(0, 0, 0, 0.4); /* Add a dark overlay */
+        z-index: 2; /* Place it above the background but below text */
+    }
+
+    .hero h1, .hero p, .btn-custom {
+        position: relative;
+        z-index: 3; /* Place text and buttons above the overlays */
+    }
+    .hero h1 {
+        font-size: 3.5rem;
+        font-weight: bold;
+        text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.6);
+    }
+    .hero p {
+        font-size: 1.2rem;
+        text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.4);
+    }
+    .btn-custom {
+        background-color: #FFD700;
+        color: #333;
+        border-radius: 25px;
+        padding: 10px 20px;
+        font-size: 1.2rem;
+        font-weight: bold;
+        text-transform: uppercase;
+        box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    }
+    .btn-custom:hover {
+        background-color: #FFA500;
+    }
+
+    /* Section Styles */
+    section {
+        min-height: 50vh;
+        margin: 40px 0;
+    }
+
+    section h2 {
+        font-size: 4rem; 
+        font-family:'Times New Roman', Times, serif;
+        font-weight: bolder;
+        color: #4CAF50;
+        margin-bottom: 30px; 
+        text-align: center;
+    }
+    section h4{
+        font-size: 2rem;
+        font-family:'Times New Roman', Times, serif;
+        font-weight: bold;
+        font-style: italic;
+        line-height: 1.4;
+        color: #555;
+        margin-bottom: 30px; 
+
+    }
+    section p {
+        font-size: 1.5rem; 
+        font-family:'Times New Roman', Times, serif;
+        font-style: italic;
+        line-height: 1.4;
+        color: #555;
+        margin-bottom: 30px; 
+    }
+
+
+    /* Cards */
+    .card {
+        border: none;
+        border-radius: 10px;
+        transition: transform 0.2s, box-shadow 0.2s;
+        box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    }
+    .card:hover {
+        transform: scale(1.05);
+        box-shadow: 0 6px 8px rgba(0, 0, 0, 0.15);
+    }
+    .card-title {
+        color: #4CAF50;
+        font-weight: bold;
+    }
+
+    /* Shop Section */
+    .btn-success {
+        background-color: #FFD700;
+        border: none;
+        color: #333;
+    }
+    .btn-success:hover {
+        background-color: #FFA500;
+    }
+    /* Customer Reviews Section */
+    #customer-reviews {
+        background-color: #f9f9f9;
+        padding: 40px 15px;
+        text-align: center;
+    }
+
+    #customer-reviews h2 {
+        font-size: 2rem;
+        color: #4CAF50;
+        margin-bottom: 20px;
+    }
+
+    .slider {
+        display: flex;
+        overflow-x: scroll;
+        gap: 20px;
+        padding-bottom: 10px;
+    }
+
+    .review-card {
+        min-width: 300px;
+        border: none;
+        border-radius: 10px;
+        box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    }
+
+    .card-body {
+        padding: 20px;
+    }
+
+    .card-text {
+        font-size: 1rem;
+        color: #555;
+        margin-bottom: 10px;
+    }
+
+    .card-author {
+        font-size: 0.9rem;
+        color: #4CAF50;
+        font-weight: bold;
+    }
+
+    .stars {
+        color: gold;
+        font-size: 1.2rem;
+        
+    }
+
+    .star {
+        cursor: pointer;
+    }
+
+    .slider::-webkit-scrollbar {
+        display: none;
+    }
+    .search-icon {
+        color: white;
+        font-size: 1.5rem;
+        cursor: pointer;
+        margin-left: auto;
+    }
+    .search-bar {
+        display: none;
+        width: 200px;
+        padding: 5px;
+        border-radius: 25px;
+        border: 1px solid #fff;
+        background-color: rgba(255, 255, 255, 0.8);
+        position: relative;
+        right: 10px;
+        top: 50%;
+        transform: translateY(-50%);
+    }
+    .search-bar:focus {
+        display: block;
+    }
